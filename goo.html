@@ -1,0 +1,45 @@
+<!DOCTYPE html5>
+<html>
+<head>
+	<link href="https://cdn.rawgit.com/ConnorAtherton/loaders.css/master/loaders.min.css" rel="stylesheet" type="text/css">
+	<link href="https://connoratherton.com/assets/css/loaders.css" rel="stylesheet" type="text/css">
+	<title></title>
+	
+	<style>
+	html, body {background:lightblue !important;}
+	</style>
+	
+	<script>
+		function redirect(){
+			var url_string = window.location.href;
+			var url = new URL(url_string);
+			var c = url.searchParams.get("s") || '';
+			if (c != ''){
+				window.location.replace(c);
+			}
+		}
+	</script>
+	
+</head>
+<body onload="redirect();">
+	<main>
+		<header>
+			<div class="left">
+				<h1>Redirecting<span>...</span></h1>
+				<h2>Please Wait</h2>
+			</div>
+		</header>
+		<div class="loaders">
+			<div class="loader">
+				<div class="pacman">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+			</div>
+		</div>
+	</main>
+</body>
+</html>
